@@ -12,6 +12,9 @@ enum Controls {
 	right = "right",
 }
 
+// I had initially planned to make it so the user could move the robot using the keyboard
+// Was used to test the animation (cube rolling over on it's sides, rotation) - which I also scrapped due to time constraints
+
 const KeyboardControlsProvider = (props: Props) => {
 	const map = useMemo<KeyboardControlsEntry<Controls>[]>(
 		() => [
