@@ -1,30 +1,26 @@
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It's also using React Three Fiber and Zustand.
+Cypress for E2E tests.
 
-Currently, two official plugins are available:
+I committed at the actual starting point in order to have a time reference, and updated this README to signal the end. (written 17:28)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Running the project
 
-## Expanding the ESLint configuration
+In order to run the application and the E2E tests, you'll have to keep the vite client running with `npm run dev`.
+Then you can run `npm run cypress:e2e` to run the E2E-tests.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Thoughts
 
-- Configure the top-level `parserOptions` property like this:
+I had an initial idea of how I wanted this to work, visualizing the movement with a cube with animated rolling and rotating.
+This was tested using keyboard controls (hence why they're still in the project), but I wasn't entirely happy with it and decided to focus on the functionality end of things.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+It's a take on the instructions and I took the liberty of making some requirements optional/nice to haves.
+Would've implemented these if I had the time. (5x5 room constraint). 
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The `starting position` is set in the `<Experience>`.
+
+I also didn't include any tests other than E2E due to time constraints.
+(And I purposefully didn't use CoPilot for this test, would've really sped things up and nowadays consider it an essential part of my IDE)
+
