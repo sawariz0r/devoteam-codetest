@@ -55,8 +55,8 @@ const CommandDisplay = () => {
 				</div>
 
 				<div className="flex">
-					<p>Progress:</p>
-					<div>
+					<p>
+						Progress:{" "}
 						{splitCommands.map((c, i) => (
 							<span
 								key={i}
@@ -68,7 +68,7 @@ const CommandDisplay = () => {
 								{c}
 							</span>
 						))}
-					</div>
+					</p>
 				</div>
 
 				<div className="flex">
