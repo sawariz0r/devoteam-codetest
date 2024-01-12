@@ -39,6 +39,7 @@ const CommandDisplay = () => {
 			<div className="flex justify-evenly">
 				<div className="flex h-full">
 					<input
+						data-cy="command-input"
 						className="bg-slate-300 rounded-l-md px-2 py-1 outline-none text-slate-800"
 						type="text"
 						value={cubeCommand}
@@ -46,6 +47,7 @@ const CommandDisplay = () => {
 					/>
 					<div className="w-[1px] h-full bg-slate-400" />
 					<button
+						data-cy="command-run"
 						className="px-2 py-1 bg-slate-300 text-slate-800 rounded-r-md"
 						onClick={handleCubeCommand}>
 						Run
@@ -70,7 +72,7 @@ const CommandDisplay = () => {
 				</div>
 
 				<div className="flex">
-					<p>Position: {position.position.join(",")}</p>
+					<p data-cy="position">Position: {position.position.join(",")}</p>
 				</div>
 			</div>
 		</div>
