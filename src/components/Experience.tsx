@@ -4,6 +4,7 @@ import { Leva, useControls } from "leva";
 import Cube from "./Cube";
 
 const Experience = () => {
+	// Was used to adjust the grid size, not really needed anymore
 	const { gridSize, ...gridConfig } = useControls({
 		gridSize: [10.5, 10.5],
 		cellSize: { value: 1, min: 0, max: 10, step: 0.1 },

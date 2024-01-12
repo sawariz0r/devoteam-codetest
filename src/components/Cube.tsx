@@ -89,9 +89,9 @@ const Cube = (props: Props) => {
 			<Html
 				center
 				sprite
-				style={{ width: 100, height: 40 }}
+				style={{ width: 100, height: 40, pointerEvents: "none" }}
 				position={[0, 1, 0]}>
-				<p>{/* Position like: 0,0,N */}</p>
+				<p>{positionState.position.join(",")}</p>
 			</Html>
 			<mesh>
 				<boxGeometry args={[1, 1, 1]} />
